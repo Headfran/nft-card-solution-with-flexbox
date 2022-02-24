@@ -1,0 +1,181 @@
+:root {
+    /** PRIMARY COLORS **/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --t-cyan: hsl(178, 100%, 50%, 50%);
+    /** NEUTRAL COLORS **/
+    --v-dark-blue-bg: hsl(217, 54%, 11%);
+    --v-dark-blue-card: hsl(216, 50%, 16%);
+    --v-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background-color: var(--v-dark-blue-bg);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.container {
+    max-width: 1440px;
+    width: 360px;
+    margin: 5% auto;
+    box-shadow: 0 20px 30px hsla(219, 47%, 6%, 0.795);
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+
+.card {
+    display: block;
+    padding: 30px;
+    background-color: var(--v-dark-blue-card);
+}
+
+/************/
+/** HEADER **/
+/************/
+.header {
+    position: relative;
+}
+
+.header .images {
+    width: 100%;
+    height: 16.6666667em;
+    border-radius: 1.2em;
+    background-image: url('images/image-equilibrium.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 1.12em;
+    overflow: hidden;
+}
+
+.header .images i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--t-cyan);
+    opacity: 0;
+    transition: .3s ease all;
+}
+
+.header .images:hover i {
+    opacity: 100%;
+}
+
+/* .header .equilibrium {
+    width: 100%;
+    border-radius: 1.25em;
+    margin-bottom: 1.12em;
+    cursor: pointer;
+} */
+
+.header .title {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 1.12rem;
+    transition: .2s ease all;
+    cursor: pointer;
+}
+
+.header .title:hover {
+    color: var(--cyan);
+}
+
+/*****************/
+/** INFORMATION **/
+/*****************/
+.info {
+    color: var(--soft-blue);
+}
+
+.info .description {
+    margin-bottom: 1.12em;
+    font-weight: 300;
+}
+
+.info .others {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.12em;
+}
+
+.info .others .eth {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.info .others .clock {
+    font-weight: 400;
+}
+
+/*********/
+/** BAR **/
+/*********/
+.card hr {
+    margin-bottom: 1.12em;
+    background-color: var(--v-dark-blue-line);
+}
+
+/************/
+/** FOOTER **/
+/************/
+.creation-of {
+    display: flex;
+    align-items: center;
+}
+
+.creation-of .avatar {
+    display: block;
+    margin-right: 1.12em;
+    width: 2em;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.creation-of .creator {
+    color: var(--soft-blue);
+}
+
+.creation-of .creator a {
+    color: var(--white);
+    font-weight: 400;
+    transition: .2s ease all;
+}
+
+.creation-of .creator a:hover {
+    color: var(--cyan);
+}
+
+/* *********** */
+/* MEDIAQUERYS */
+/* *********** */
+@media screen and (max-width: 375px)
+{
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 10vh;
+    }
+}
